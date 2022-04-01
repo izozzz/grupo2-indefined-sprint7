@@ -37,17 +37,21 @@ function nombreValidator()
 
 function emailValidator()
     {
-        if (email.value != "" && !email.value.includes("@")){
-            let error = "Debe ingresar un email valido"
-            errorEmail.innerHTML = error
-            errores.email = error;
-                };
         if (email.value == ""){
             let error = "Ingresa un email";
-            errorEmail.innerHTML = error
+            errorEmail.innerHTML = error;
             errores.email = error;
-                }
-            }
+                } 
+        else if (email.value != "" && (!email.value.includes("@") || !email.value.includes("."))){
+            let error = "Debe ingresar un email valido";
+            errorEmail.innerHTML = error;
+            errores.email = error;
+                } 
+        else {
+                    errorEmail.innerHTML = "";
+                    errores.email = "";
+                };
+    };
 
 function passwordValidator()
     {
