@@ -26,7 +26,7 @@
                         <label for="name">Nombre<b>(*)</b><input class= "nombreApellido" type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>" ></label>
                         <% if (locals.errors && errors.name) { %>
                             <div class="text-danger" >
-                                <%= errors.name.msg %> 
+                                <%= errors.name.msg %>
                             </div>
                         <% } %>
                         <div id = "errorNombre"></div>
