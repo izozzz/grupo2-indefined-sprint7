@@ -1,4 +1,7 @@
 /* ========================= GENERAL ========================= */
+.opacity{
+    opacity: 80%;
+}
 *{
     margin: 0px;
     padding: 0px;    

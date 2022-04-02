@@ -1,6 +1,8 @@
 let email = document.querySelector("div.email label input");
 let password = document.querySelector("div.password label input");
 
+let formulario = document.querySelector("form.registerjs");
+
 let errorEmail = document.querySelector("#errorEmail");
 let errorPassword = document.querySelector("#errorPassword");
 
@@ -40,3 +42,15 @@ function passwordValidator(){
         errores.password = "";
     };
 };
+
+formulario.addEventListener("submit",function(event)
+    {
+        if (errores.length > 0)
+        {
+            event.preventDefault();
+            let ulErrores = document.querySelector(".errores");
+                ulErrores.innerHTML = "Revisa los campos por corregir";
+                console.log(ulErrores);
+        }
+        
+    })

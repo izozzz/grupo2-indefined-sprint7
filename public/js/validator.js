@@ -22,16 +22,17 @@ function nombreValidator()
             errorNombre.innerHTML = error;
             errores.nombre = error
 
-        }
-        else
-        {
-            if(nombreApellido.value.length < 2)
+        }else if(nombreApellido.value.length < 2)
             {
                 let error = "El nombre debe ser mayor a 2 caracteres"
                 errorNombre.innerHTML = error;
                 errores.nombre = error
             }
-        }
+            else{
+                errorNombre.innerHTML = "";
+                errores.nombre = "";
+            };
+        
         console.log(errores);
     }
 
@@ -61,11 +62,15 @@ function passwordValidator()
                 errorPassword.innerHTML = error
                 errores.password = error;
             }
-            if (inputPassword != "" && inputPassword.length < 8){
+            else if (inputPassword != "" && inputPassword.length < 8){
                 let error = "La contraseña deberá tener al menos 8 caracteres";
                 errorPassword.innerHTML = error
                 errores.password = error;
             }
+            else{
+                errorPassword.innerHTML = "";
+                errores.password = "";
+            };
     }
 
 formulario.addEventListener("submit",function(event)

@@ -12,7 +12,7 @@ const mainController= {
         try{
             let products=await Product.findAll({
                 include:["discounts","images"],
-                where: {recommended:1}
+                where: {recommended:1, visibility:1}
             })
                 
                 return res.render('products/index',{products})
